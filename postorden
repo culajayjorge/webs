@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+
+struct Nodo {
+    int dato;
+    Nodo* izquierda;
+    Nodo* derecha;
+};
+
+// Crear un nuevo nodo
+Nodo* crearNodo(int dato) {
+    Nodo* nuevo = new Nodo();
+    nuevo->dato = dato;
+    nuevo->izquierda = NULL;
+    nuevo->derecha = NULL;
+    return nuevo;
+}
+
+// Recorrido Postorden
+void postorden(Nodo* raiz) {
+    if (raiz != NULL) {
+        postorden(raiz->izquierda);
+        postorden(raiz->derecha);
+        cout << raiz->dato << " ";
+    }
+}
+
+int main() {
+    // Crear el árbol
+    Nodo* raiz = crearNodo(1);
+    raiz->izquierda = crearNodo(2);
+    raiz->derecha = crearNodo(3);
+    raiz->izquierda->izquierda = crearNodo(4);
+    raiz->izquierda->derecha = crearNodo(5);
+    raiz->derecha->izquierda = crearNodo(6);
+    raiz->derecha->derecha = crearNodo(7);
+
+    cout << "Recorrido Postorden: ";
+    postorden(raiz);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
