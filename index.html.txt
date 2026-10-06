@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapatería Online</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            font-size: 40px;
+        }
+
+        nav {
+            background: #222;
+            text-align: center;
+            padding: 18px;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        section {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        /* INICIO */
+        #inicio {
+            min-height: 500px;
+            background: linear-gradient(
+                rgba(0,0,0,.45),
+                rgba(0,0,0,.45)
+            ),
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1400&q=80";
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #inicio h2 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        #inicio p {
+            font-size: 20px;
+        }
+
+        .boton {
+            background: #ff9800;
+            color: white;
+            padding: 14px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 25px;
+        }
+
+        /* PRODUCTOS */
+        #productos {
+            background: white;
+        }
+
+        .productos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .producto {
+            width: 250px;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px #bbb;
+            padding-bottom: 20px;
+        }
+
+        .producto img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .producto h3 {
+            margin: 15px 0 8px;
+        }
+
+        .precio {
+            color: #e67e22;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .comprar {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 11px 25px;
+            border-radius: 6px;
+            margin-top: 12px;
+            cursor: pointer;
+        }
+
+        /* OFERTAS */
+        #ofertas {
+            background: #fff0d5;
+        }
+
+        #ofertas img {
+            width: 300px;
+            max-width: 90%;
+            border-radius: 15px;
+            margin: 25px;
+        }
+
+        #ofertas h2 {
+            color: #e67e22;
+            font-size: 35px;
+        }
+
+        /* NOSOTROS */
+        #nosotros {
+            background: #e9ecef;
+        }
+
+        .nosotros-contenido {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .nosotros-contenido img {
+            width: 400px;
+            max-width: 90%;
+            border-radius: 15px;
+        }
+
+        .texto {
+            max-width: 500px;
+            line-height: 1.7;
+            text-align: left;
+        }
+
+        /* CONTACTO */
+        #contacto {
+            background: white;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 30px auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        textarea {
+            height: 120px;
+        }
+
+        .enviar {
+            background: #111;
+            color: white;
+            border: none;
+            padding: 13px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>👟 ZAPATERÍA ONLINE</h1>
+        <p>Calidad, comodidad y estilo</p>
+    </header>
+
+    <!-- MENÚ -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#ofertas">Ofertas</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- 1. INICIO -->
+    <section id="inicio">
+        <h2>Encuentra tus zapatos ideales</h2>
+        <p>Los mejores estilos al mejor precio.</p>
+        <a href="#productos" class="boton">Ver productos</a>
+    </section>
+
+    <!-- 2. PRODUCTOS -->
+    <section id="productos">
+        <h2>👟 Nuestros Productos</h2>
+
+        <div class="productos">
+
+            <div class="producto">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80">
+                <h3>Tenis Deportivos</h3>
+                <p>Comodidad para hacer deporte.</p>
+                <p class="precio">Q450</p>
+                <button class="comprar">Comprar</button>
+            </div>
+
+            <div class="producto">
+                <img src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=600&q=80">
+                <h3>Zapatos Casuales</h3>
+                <p>Perfectos para todos los días.</p>
+                <p class="precio">Q350</p>
+                <button class="comprar">Comprar</button>
+            </div>
+
+            <div class="producto">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80">
+                <h3>Zapatos Formales</h3>
+                <p>Elegancia para ocasiones especiales.</p>
+                <p class="precio">Q550</p>
+                <button class="comprar">Comprar</button>
+            </div>
+
+            <div class="producto">
+                <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&w=600&q=80">
+                <h3>Botas</h3>
+                <p>Resistentes y modernas.</p>
+                <p class="precio">Q600</p>
+                <button class="comprar">Comprar</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. OFERTAS -->
+    <section id="ofertas">
+        <h2>🔥 OFERTAS ESPECIALES 🔥</h2>
+
+        <img src="https://images.unsplash.com/photo-1554134219-6b3b8f3f5b99?auto=format&fit=crop&w=700&q=80">
+
+        <h3>¡Hasta 30% de descuento!</h3>
+        <p>Compra tus zapatos favoritos con precios especiales.</p>
+    </section>
+
+    <!-- 4. NOSOTROS -->
+    <section id="nosotros">
+        <h2>👥 Sobre Nosotros</h2>
+
+        <div class="nosotros-contenido">
+
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80">
+
+            <div class="texto">
+                <p>
+                    Somos una tienda en línea dedicada a la venta de
+                    zapatos para hombres, mujeres y jóvenes.
+                </p>
+
+                <p>
+                    Nuestro objetivo es ofrecer productos de buena
+                    calidad, precios accesibles y diferentes estilos
+                    para nuestros clientes.
+                </p>
+
+                <p>
+                    Contamos con tenis, botas, zapatos casuales y
+                    zapatos formales.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. CONTACTO -->
+    <section id="contacto">
+        <h2>📞 Contáctanos</h2>
+
+        <form>
+            <input type="text" placeholder="Nombre completo">
+
+            <input type="email" placeholder="Correo electrónico">
+
+            <input type="tel" placeholder="Número de teléfono">
+
+            <textarea placeholder="Escribe tu mensaje"></textarea>
+
+            <button class="enviar" type="submit">
+                Enviar mensaje
+            </button>
+        </form>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>© 2026 Zapatería Online</p>
+        <p>Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
